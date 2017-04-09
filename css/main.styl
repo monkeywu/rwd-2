@@ -1,37 +1,59 @@
+/*  common  */
+a 
+  display block
+  transition all 0.5s
+  &:hover
+    text-decoration none
+img 
+  display block
+ul
+  padding 0
+  margin 0
+li
+  list-style none
+.container
+  padding-left 0px
+  padding-right 0px
+
+/*  header    */
+.header
+  height 60px
+  
 .hamburger {
-  width: 140px;
-  height: 110px;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  top: 50%;
-  margin-top: -55px;
-  left: 50%;
-  margin-left: -60px;
+  top: 3%;
+  left: 8%;
   cursor: pointer;
+  z-index: 101;
+  
   .hamburger-span {
     position: absolute;
     width: 100%;
-    height: 20px;
-    background: black;
-    border-radius: 10px;
+    height: 5px;
+    background: #324397;
+    border-radius: 1px;
     transition: 0.6s;
   }
   
   .hamburger-span:nth-child(2){
-    top: 45px;
+    top: 10px;
   }
   
   .hamburger-span:nth-child(3){
-    top: 45px;
+    top: 10px;
   }
   
   .hamburger-span:nth-child(4){
-    top: 90px;
+    top: 20px;
   }
-  }
+}
 
-.hamburger.open {
+.open {
+  
   .hamburger-span{
-    background: black; 
+    background: #0055AA; 
     transition: 0.6s;
   }
   
@@ -53,3 +75,289 @@
     opacity: 0;
   }
 }
+
+.logo
+  width 150px
+  position absolute
+  transform translateX(-50%)
+  left 50%
+  top 3%
+  img
+    width 100%
+    height auto
+.search
+  position absolute
+  top 3%
+  right 8%
+  font-size 20px
+  a
+    color #324397
+.label
+  display none
+.menu 
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-color #fff
+  z-index 100
+  display none
+  li
+    font-size 20px
+    padding-bottom 20px
+    border-bottom 2px solid
+    &:nth-child(odd)
+      text-align right
+    a
+      color black  
+.carousel-caption
+  font-size 19px
+  font-weight bold
+  text-align left
+  .learn
+    font-size 14px
+    font-weight 500
+    margin 10px 0 10px 0
+    text-align center
+    a
+      color white
+      span
+        border 1px solid 
+        border-radius 10px
+        padding 5px
+        transition all 0.5s
+        &:hover
+          color black
+          background-color white
+          text-decoration none
+.carousel-control
+  display none
+
+.content .c-box
+  background-color #27262C
+  border 15px solid #27262C
+  margin 0 auto
+  &:first-child
+    padding-top 15px
+  &:last-child
+    padding-bottom 15px
+.box
+  position relative
+  overflow hidden
+  background-color #f1f1f1
+.imgbox
+  position relative
+  width 100%
+  -webkit-mask-image -webkit-linear-gradient(left top, transparent 10%, #27262C 10%)
+  img
+    width 100%
+.description
+  padding 10px 0
+  background-color white
+  h3
+    margin 0 0 0 10px
+    font-size 17px
+    &:first-child
+      padding-top 10px
+.title
+  p
+    display none
+  a
+    display none
+.social-media
+  text-align center
+  background-color #f1f1f1
+  ul
+    padding 10px 0
+    width 100%
+    li
+      float left
+      list-style none
+      width 33%
+      a
+        color #D2D2D2
+        display inline-block
+        line-height 30px
+        width 30px
+        height 30px
+        border 1px solid
+        border-radius 99em
+        &:hover
+          background black
+          color white 
+.copy
+   text-align center
+   background-color #111
+   border 15px solid #111
+   h3
+    font-size 15px
+    margin 0 0 15px 0
+    color #A0A0A0
+    &:first-child
+      padding-top 15px
+.link
+  display none      
+.footer-social-media 
+  background-color #111
+  ul
+    text-align center
+    padding-bottom 15px
+    li
+      display inline-block
+      width 20%          
+      a
+        color #A0A0A0
+        font-size 20px
+        &:hover
+          color white
+.rotate
+  transform rotate(45deg) 
+  
+
+
+/*  @media   */
+@media (min-width:450px) 
+  .carousel-control
+    display block
+  .carousel-caption
+    font-size 30px
+    .learn
+      text-align left
+@media (min-width:768px) 
+  .container
+    padding-left 15px
+    padding-right 15px
+    max-width 768px
+  .header
+    height 120px
+  .hamburger 
+    display none
+  .item img
+    width 100%
+  .logo
+    position static
+    transform translateX(0%)
+    margin 20px 0 10px 5px
+  .label
+    display block
+  .menu
+    display block
+    position static
+    ul
+      float left
+      padding 0
+      width 100%
+      text-align center
+      li
+        display inline-block
+        font-size 14px
+        border 0
+        a
+          color white
+          background-color #1C4477
+          transition all 0.5s
+          padding 5px
+          &:hover
+            color black
+            text-decoration none
+  .carousel-caption
+    font-size 38px
+    .learn
+      position absolute
+      right -20%
+      bottom 15%
+
+@media (min-width:1024px) 
+  .content .c-box
+    border 0
+    background-color #fff
+    position relative
+    margin 20px 0 
+    &:first-child
+      padding-top 40px
+    .imgbox
+      width 50%
+      -webkit-mask-image none
+      float left
+      height 100%
+      &:after
+        position absolute
+        content ''
+        bottom 0
+        right 0
+        border-bottom 300px solid #F1F1F1
+        border-left 150px solid transparent
+  .content .even
+    border 1px solid #F1F1F1
+    .box
+      background-color #fff
+      .imgbox
+        float right
+        -webkit-mask-image -webkit-linear-gradient(left top, transparent 30%, #fff 30%)
+        &:after
+          content none
+          
+      .description
+        background-color #fff
+        float left
+        .title
+          margin-left 20px
+    
+  .description
+    float right
+    width 50%
+    height 100%
+    background-color #f1f1f1
+    position relative
+    .title 
+      padding-top 60px
+      h3
+        margin 0
+      p
+        display block
+        color gray
+      a
+        display block
+  .social-media
+    position absolute
+    bottom 0
+    right 0
+    margin-bottom 10px
+    background-color transparent
+    ul
+      transform none
+      padding 0
+      li
+        padding-right 10px
+        
+  .copy
+    background-color #E8EAF0
+    border 0
+    h3 
+      margin 0
+      float left
+      line-height 71px
+      font-size 12px
+      color black
+      &:first-child
+        padding 0
+        margin-left 10px
+  .footer-social-media
+    background-color #E8EAF0
+    float right
+    ul
+      padding 0
+      li
+        float left
+        line-height 71px
+        padding 0 5px 
+
+
+
+
+
+
+
+      
+    
