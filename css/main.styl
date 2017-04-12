@@ -18,13 +18,16 @@ li
 /*  header    */
 .header
   height 60px
-  
+  .container
+    position relative
+    height 100%
 .hamburger {
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 3%;
+  top: 50%;
   left: 8%;
+  transform translateY(-50%)
   cursor: pointer;
   z-index: 101;
   
@@ -79,16 +82,18 @@ li
 .logo
   width 150px
   position absolute
-  transform translateX(-50%)
+  transform translate(-50%,-50%)
   left 50%
-  top 3%
+  top 50%
   img
-    width 100%
+    width 50%
     height auto
+    margin 0 auto
 .search
   position absolute
-  top 3%
+  top 50%
   right 8%
+  transform translateY(-50%)
   font-size 20px
   a
     color #324397
@@ -111,6 +116,7 @@ li
       text-align right
     a
       color black  
+/*    slider     */
 .carousel-caption
   font-size 19px
   font-weight bold
@@ -133,7 +139,7 @@ li
           text-decoration none
 .carousel-control
   display none
-
+/*       content      */
 .content .c-box
   background-color #27262C
   border 15px solid #27262C
@@ -190,6 +196,7 @@ li
         &:hover
           background black
           color white 
+/*    footer      */
 .copy
    text-align center
    background-color #111
@@ -235,36 +242,12 @@ li
     max-width 768px
   .header
     height 120px
-  .hamburger 
-    display none
+    .container
+      max-width 100%
   .item img
     width 100%
-  .logo
-    position static
-    transform translateX(0%)
-    margin 20px 0 10px 5px
   .label
     display block
-  .menu
-    display block
-    position static
-    ul
-      float left
-      padding 0
-      width 100%
-      text-align center
-      li
-        display inline-block
-        font-size 14px
-        border 0
-        a
-          color white
-          background-color #1C4477
-          transition all 0.5s
-          padding 5px
-          &:hover
-            color black
-            text-decoration none
   .carousel-caption
     font-size 38px
     .learn
@@ -307,7 +290,32 @@ li
         float left
         .title
           margin-left 20px
-    
+  .menu
+    display block
+    position static
+    padding-top 45px
+    ul
+      float left
+      padding 0
+      width 100%
+      text-align center
+      li
+        display inline-block
+        font-size 14px
+        border 0
+        a
+          color white
+          background-color #1C4477
+          transition all 0.5s
+          padding 5px
+          &:hover
+            color black
+            text-decoration none
+   .logo
+    position absolute
+    transform translateY(-50%)
+    margin 0
+    left -3%
   .description
     float right
     width 50%
@@ -336,7 +344,10 @@ li
       padding 0
       li
         padding-right 10px
-        
+  .search
+    display none
+  .hamburger 
+    display none
   .copy
     background-color #E8EAF0
     border 0
